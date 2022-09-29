@@ -41,7 +41,7 @@
     transition-duration: .4s;
 }
 
-.navegacion a:hover
-{
+.navegacion a:hover,
+.active{
     background-color: rgb(31, 69, 236);
 }
