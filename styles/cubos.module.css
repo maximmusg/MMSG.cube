@@ -1,10 +1,12 @@
-.cubos{ 
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+.cubo{ 
+    /* display: grid; */
+    /* grid-template-columns: 2fr 3fr; */
     gap: 1rem;
     align-items: center;
     margin: 0 auto;
-    
+    max-width: 80rem;
+
+
 }
 
 /* ver tamanos */
@@ -14,6 +16,7 @@
 }
 
 .contenido h3 {
+    font-weight: 900;
     font-size: 3 rem;
     text-transform: uppercase;
     color: var(--primary);
@@ -51,6 +54,11 @@
 }
 
 .enlace:hover{  
-    background-color:var(--primary);
+    background-color: rgb(235, 235, 49);
 }
+
+.texto{
+    white-space: pre-wrap;
+}
+
 
