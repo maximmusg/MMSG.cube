@@ -1,6 +1,6 @@
 .post{
     max-width: 80rem;
-    color: red;
+    /* color: red; */
 }
 
 .contenido{ 
@@ -26,11 +26,20 @@
     overflow: hidden;
 }
 
+.texto{
+    white-space: pre-wrap;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+
 .descripcion{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
     overflow: hidden;
+    /* color: gray; */
 }
 
 .enlace{
