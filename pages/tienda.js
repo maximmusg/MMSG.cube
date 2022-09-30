@@ -1,19 +1,53 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Link from 'next/link'
+import Cubo from '../components/cubo'
+import styles from '../styles/grid.module.css'
 
-export default function Tienda() {
+export default function Tienda({cubos}) {
+
+  // console.log(cubos)
+
   return (
 
     <Layout
         title={'Tienda'}
         description='Tienda de cubos'
     >
-        <h1>Desde Tienda</h1>
-        <Link href="/">Ir a Inicio</Link>
+      <main className='contenedor'>
+        <h1 className='heading'>Nuestra Coleccion</h1>
+
+        <div className={styles.grid} >
+          {cubos.map(cubo => (
+            <Cubo 
+              key={cubo.id}
+              cubo={cubo.attributes}
+            />
+          ))}
+        </div>
+        
+      </main>  
     </Layout>
-
-
-   
   )
+}
+
+// export async function getStaticProps() {
+//   const respuesta = await fetch(`${process.env.API_URL}/cubos?populate=imagen`)
+//   const {data: cubos} = await respuesta.json()
+
+//   return {
+//     props: {
+//       cubos
+//     }
+//   }
+// }
+
+export async function getServerSideProps() {
+  const respuesta = await fetch(`${process.env.API_URL}/cubos?populate=imagen`)
+  const {data: cubos} = await respuesta.json()
+
+  return {
+    props: {
+      cubos
+    }
+  }
 }
