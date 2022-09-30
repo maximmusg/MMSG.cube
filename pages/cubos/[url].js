@@ -1,11 +1,25 @@
 import { useRouter } from "next/router"
+import Image from "next/future/image"
+import styles from '../../styles/cubos.module.css'
+import Layout from '../../components/Layout'
 
 export default function Producto({cubo}) {
     
-    console.log(cubo[0].attributes.nombre)
+    const { nombre, descripcion , imagen, precio } = cubo[0].attributes
 
-  return (
-    <div>[url]</div>
+    return (
+        <Layout
+            title={`${nombre}`}
+        >
+            <div className={styles.cubo}>
+                {/* <Image src={imagen.data.attributes.url} width={600} height={400} alt={`hola`} /> */}
+                <div className={styles.contenido}>
+                    <h3>{nombre}</h3>
+                    <p className={styles.descripcion}>{descripcion}</p>
+                    <p className={styles.precio}>{precio}</p>
+                </div>
+            </div>
+        </Layout>
   )
 }
 
