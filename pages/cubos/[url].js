@@ -11,8 +11,8 @@ export default function Producto({cubo}) {
         <Layout
             title={`${nombre}`}
         >
-            <div className={styles.cubo}>
-                {/* <Image src={imagen.data.attributes.url} width={600} height={400} alt={`hola`} /> */}
+            <div className={styles.cubos}>
+                <Image src={imagen.data.attributes.url} width={600} height={400} alt={`hola`} />
                 <div className={styles.contenido}>
                     <h3>{nombre}</h3>
                     <p className={styles.texto}>{descripcion}</p>

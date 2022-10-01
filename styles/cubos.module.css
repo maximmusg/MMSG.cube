@@ -1,10 +1,10 @@
-.cubo{ 
-    /* display: grid; */
-    /* grid-template-columns: 2fr 3fr; */
+.cubos{ 
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     gap: 1rem;
     align-items: center;
     margin: 0 auto;
-    max-width: 80rem;
+    /* max-width: 80rem; */
 
 
 }

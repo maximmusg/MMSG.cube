@@ -21,7 +21,7 @@ img {
 }
 
 [class*="contenedor"] {
-  max-width: 120rem;
+  max-width: 130rem;
   margin: 0 auto;
   width: 95%;
 }
